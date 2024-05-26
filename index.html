@@ -40,11 +40,11 @@
     </head>
     <body>
       <div class="navbar">
-        <h1>PETA PEMETAAN RUMAH SAKIT DI WILAYAH SURABAYA</h1>
-        <img src="./images/mataangin.svg" alt="Logo" class="logo" >
+      <h1>PETA PEMETAAN RUMAH SAKIT DI WILAYAH SURABAYA</h1>
+      <img src="./images/mataangin.svg" alt="Logo" class="logo" >
+    </div>
+      <div id="map">
       </div>
-        <div id="map">
-        </div>
         <script src="js/qgis2web_expressions.js"></script>
         <script src="js/leaflet.js"></script>
         <script src="js/L.Control.Layers.Tree.min.js"></script>
@@ -300,7 +300,7 @@
                 fill: true,
                 fillOpacity: 1,
                 fillColor: 'rgba(219,30,42,1.0)',
-                interactive: true,
+                interactive: false,
             }
         }
         map.createPane('pane_SaranaKesehatan_2');
@@ -308,7 +308,7 @@
         map.getPane('pane_SaranaKesehatan_2').style['mix-blend-mode'] = 'normal';
         var layer_SaranaKesehatan_2 = new L.geoJson(json_SaranaKesehatan_2, {
             attribution: '',
-            interactive: true,
+            interactive: false,
             dataVar: 'json_SaranaKesehatan_2',
             layerName: 'layer_SaranaKesehatan_2',
             pane: 'pane_SaranaKesehatan_2',
